@@ -24,13 +24,16 @@
       --radius: 8px;
     }
     *{ box-sizing: border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.5;
-    }
+  body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+
+  /* ✅ image derrière la carte */
+  background: url("SPERm.jpg") center / cover no-repeat fixed;
+}
     a{ color: var(--link); text-decoration: none; }
     a:hover{ text-decoration: underline; }
 
@@ -58,15 +61,11 @@
     }
 
     /* Main card */
-    .wrap{
+   .wrap{
   max-width: var(--maxw);
   margin: 26px auto;
   padding: 0 20px 40px;
-
-  background-image: url("SPERm.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
+  background: transparent; /* ✅ important si tu avais mis un fond */
 }
     .card{
       background: var(--card);
